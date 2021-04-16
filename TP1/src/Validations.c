@@ -6,6 +6,14 @@
 #include "MathOperations.h"
 #include "Validations.h"
 
+/**
+ * @fn int GoThroughDigits(char[], int)
+ * @brief Avanza siempre y cuando exista un digito.
+ *
+ * @param str: variable a analizar.
+ * @param i: cantidad de posiciones del array.
+ * @return Retorna la posicion final donde no queden mas digitos por delante.
+ */
 int GoThroughDigits(char str[], int i)
 {
     while(isdigit(str[i]))
@@ -14,7 +22,14 @@ int GoThroughDigits(char str[], int i)
     }
     return i;
 }
-
+/**
+ * @fn int GoThroughSpaces(char[], int)
+ * @brief Avanza siempre y cuando exista un espacio.
+ *
+ * @param str: variable a analizar.
+ * @param i: cantidad de posiciones del array.
+ * @return Retorna la posicion final donde no queden mas espacios por delante.
+ */
 int GoThroughSpaces(char str[], int i)
 {
     while(isspace(str[i]))
@@ -23,7 +38,13 @@ int GoThroughSpaces(char str[], int i)
     }
     return i;
 }
-
+/**
+ * @fn int IsReal(char[])
+ * @brief Recibe una cadena de caracteres y verifica que cumpla los requisitos para ser de tipo decimal o entero.
+ *
+ * @param str: array a analizar.
+ * @return Retorna 1: Si cumple los requisitos. Retorna 0: Si no los cumple.
+ */
 int IsReal(char str[])
 {
     int resultado;
@@ -64,6 +85,13 @@ int IsReal(char str[])
     }
     return resultado;
 }
+/**
+ * @fn int IsInt(char[])
+ * @brief Recibe una cadena de caracteres y verifica que cumpla los requisitos para ser de tipo entero.
+ *
+ * @param str: array a analizar.
+ * @return Retorna 1: Si cumple los requisitos. Retorna 0: Si no los cumple.
+ */
 int IsInt(char str[])
 {
     int resultado;
@@ -87,6 +115,15 @@ int IsInt(char str[])
 	}
     return resultado;
 }
+/**
+ * @fn int ValidateRange(int, int, int)
+ * @brief Recibe un numero entero y un rango el cual tendra que validar si lo cumple o no.
+ *
+ * @param num: numero a analizar.
+ * @param min: rango minimo a cumplir.
+ * @param max: rango maximo a cumplir.
+ * @return Retorna 1: Si cumple la condicion. Retorna 0: Si no cumple la condicion.
+ */
 int ValidateRange(int num, int min, int max)
 {
     if(num >= min && num <= max)
@@ -95,6 +132,13 @@ int ValidateRange(int num, int min, int max)
     }
     return 0;
 }
+/**
+ * @fn int ValidateDivision(float)
+ * @brief Verifica que el numero divisor sea distinto de cero o no.
+ *
+ * @param numero: numero a analizar.
+ * @return Retorna 1: Si es diferente a cero. Retorna 0: Si es igual a 0.
+ */
 int ValidateDivision (float numero)
 {
 	int retorno;
@@ -107,6 +151,13 @@ int ValidateDivision (float numero)
 	}
 	return retorno;
 }
+/**
+ * @fn int ValidateIntFactorial(float)
+ * @brief Verifica que el numero a calcular sea entero o no.
+ *
+ * @param numero: numero a analizar.
+ * @return Retorna 1: Si es entero. Retorna 0: Si no lo es.
+ */
 int ValidateIntFactorial (float numero)
 {
 	int retorno;

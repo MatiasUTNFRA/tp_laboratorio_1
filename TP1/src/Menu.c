@@ -5,15 +5,21 @@
 #include "Menu.h"
 #include "MathOperations.h"
 #include "Validations.h"
-#define MIN 1
-#define MAX 5
 
+/**
+ * @fn int menu(double, double)
+ * @brief Menu principal de la calculadora, muestra la interfaz y el valor de los operandos a calcular.
+ *
+ * @param a: pirmer operando.
+ * @param b: segundo operando.
+ * @return Retorna la opcion elegida por el usuario.
+ */
 int menu(double a, double b)
 {
 	int opcion;
-
+	system("cls");
 	printf ("\n<<< Calculadora >>>\n\n");
-    system("cls");
+    printf ("Seleccione la opcion deseada: \n");
     printf(" 1. Ingresar 1er operando A = %.2lf\n", a);
     printf("2. Ingresar 2do operando B = %.2lf\n", b);
     printf("3. Calcular todas las operaciones\n");
@@ -25,8 +31,7 @@ int menu(double a, double b)
     printf("4. Informar resultados\n");
     printf("5. Salir\n");
 
-    opcion = GetRange(MIN, MAX);
+    opcion = GetNumber(MIN, MAX);
 
     return opcion;
 }
-

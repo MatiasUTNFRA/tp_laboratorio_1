@@ -61,6 +61,11 @@ int main(void)
 					{
 						factorialB = DoFactorial(b);
 					}
+					if (multiplicacion == -0)
+					{
+						multiplicacion = 0;
+						division = 0;
+					}
 					printf ("\n--Calculos realizados--\n\n");
 
 					flag = 1;
@@ -73,6 +78,8 @@ int main(void)
 	        			break;
 	        		}
 					ShowResults (a, b, suma, resta, multiplicacion, division, factorialA, factorialB);
+
+					flag = 0;
 					break;
 	        }
 	        system("pause");
